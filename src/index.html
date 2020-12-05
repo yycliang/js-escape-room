@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HW Escape Room</title>
+    <link rel="stylesheet" href="scss/style.scss" />
+    <link rel="stylesheet" href="scss/popups.scss" />
+  </head>
+  <body>
+    <!-- Start Screen -->
+    <div id="start-screen" class="start-screen">
+      <div class="start-screen-content">
+        <p><strong>HW Escape - By YYCLiang</strong></p>
+        <p>
+          Hey! So you’re a huge procrastinator and haven't finished your
+          homework that's due tonight at 11:59 PM. Your parents have locked you
+          in your room until you finish, do you want to get started?
+        </p>
+        <button id="start-button">Ugh...Sure</button>
+      </div>
+    </div>
+
+    <!-- End Screen -->
+    <section id="end-screen" class="end-screen">
+      <div class="end-screen-content">
+        <p>
+          Woo hoo! You finished all your homework in the nick of time! Time to
+          visit the kitchen for a midnight snack!
+        </p>
+        <h2>Thanks for playing! -YYCLiang :D!</h2>
+        <button id="end-button">Restart</button>
+        <hr />
+        <h3>Credit For Puzzle Ideas/Inspirations</h3>
+        <a
+          href="https://www.facebook.com/search/top?q=perplexing%20doodles%20and%20escape%20room%20memes"
+          >Perplexing Doodles</a
+        >
+        <br />
+        <a href="https://www.instagram.com/mathematicsforlife/?hl=en"
+          >Mathematics for Life</a
+        >
+        <br />
+        <a href="https://www.facebook.com/groups/crypticenigmas"
+          >Cryptic Enigmas</a
+        ><br />
+        <a href="https://www.facebook.com/groups/escaperoomenthusiasts"
+          >Escape Room Enthusiasts - Shai Maor</a
+        ><br />
+        <div class="text-center">
+          Icons made by
+          <a href="https://www.flaticon.com/authors/freepik" title="Freepik"
+            >Freepik</a
+          >
+          from
+          <a href="https://www.flaticon.com/" title="Flaticon"
+            >www.flaticon.com</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Timer/Header Section -->
+    <section class="header">
+      <img
+        class="sound-icon"
+        width="auto"
+        height="50px"
+        src="img/sound.png"
+        alt=""
+      />
+      <h4>The Real Hero - Alan Silvestri</h4>
+      <h1 class="text-center">Quick! Finish all the Homework to Escape!</h1>
+      <button id="restart-btn">Restart</button>
+    </section>
+
+    <!-- Main Screen Play -->
+    <section class="screen">
+      <!-- BED AREA -->
+      <div class="bed-grid flex-end relative">
+        <img
+          onclick="openModal();currentSlide(1)"
+          class="object avengers"
+          width="125px"
+          height="auto"
+          src="img/avengers.png"
+          alt=""
+        />
+        <img
+          onclick="openModal();currentSlide(4)"
+          class="object books"
+          width="75px"
+          height="auto"
+          src="img/books.png"
+          alt=""
+        />
+        <img
+          class="relative"
+          width="300px"
+          height="auto"
+          src="img/bed.png"
+          alt=""
+        />
+      </div>
+      <!-- DESK AREA -->
+      <div class="desk-grid flex-end relative">
+        <img
+          onclick="openModal();currentSlide(5)"
+          class="object laptop"
+          width="100px"
+          height="auto"
+          src="img/laptop.png"
+          alt=""
+        />
+        <img
+          onclick="openModal();currentSlide(6)"
+          class="object poster"
+          width="75px"
+          height="auto"
+          src="img/periodic-table.png"
+          alt=""
+        />
+        <img
+          class="stool"
+          width="150px"
+          height="auto"
+          src="img/stool.png"
+          alt=""
+        />
+        <img
+          onclick="openModal();currentSlide(7)"
+          class="object calculator"
+          width="50px"
+          height="auto"
+          src="img/calculator.png"
+          alt=""
+        />
+        <div>
+          <img
+            onclick="openModal();currentSlide(8)"
+            class="object globe"
+            width="75px"
+            height="auto"
+            src="img/geography.png"
+            alt=""
+          />
+        </div>
+        <img
+          class="relative"
+          width="300px"
+          height="auto"
+          src="img/desk.png"
+          alt=""
+        />
+      </div>
+      <!-- DOOR AREA -->
+      <div class="door-grid flex-end relative">
+        <img
+          onclick="openModal();currentSlide(2)"
+          class="object schedule"
+          width="75px"
+          height="auto"
+          src="img/post-it.png"
+          alt=""
+        />
+        <img
+          onclick="openModal();currentSlide(3)"
+          class="object padlock"
+          width="50px"
+          height="auto"
+          src="img/padlock.png"
+          alt=""
+        />
+        <img
+          class="relative"
+          width="300px"
+          height="auto"
+          src="img/door.png"
+          alt=""
+        />
+      </div>
+    </section>
+    <div id="puzzlePopup" class="modal">
+      <span class="puzzle-close cursor">&times;</span>
+      <!-- The individual slides begin here -->
+      <div class="all-puzzles">
+        <!-- Avengers Poster -->
+        <div class="each-puzzle">
+          <p>Not a Puzzle: The creator of this room loves the Avengers and decided to show this cute drawing to you. 
+            (Credit to <a href="https://www.instagram.com/mr.colourist/">Mr. Colourist</a>)</p>
+          <div class="puzzle-content">
+            <img src="img/avengerspuzzle.jpg" width="450px" height="auto" />
+          </div>
+        </div>
+        <!-- Schedule On Post-It Note -->
+        <div class="each-puzzle">
+          <p>This is your class schedule for school. </p>
+          <div class="puzzle-content">
+            <img src="img/schedule.png" width="350px" height="auto" />
+          </div>
+        </div>
+        <!-- The other popups should show here via JS "beforeend"-->
+        <!-- <div class="each-puzzle">
+          <p>That is the lock on your door. Make sure you've finished all your homework to escape! </p>
+          <div class="puzzle-content">
+            <img src="img/padlockpuzzle.jpg" width="350px" height="auto" />
+            <div class="flex-column">
+              <p id="lockCheck"></p>
+              <img src="img/schoolanswer.PNG" width="300px" height="auto" alt="">
+              <input type="text" id="SCHOOL" placeholder="Your Answer" />
+              <input type="submit" id="lockSubmit" value="Submit" />
+            </div>
+          </div>
+        </div> -->
+        
+
+    </div>
+
+    <iframe
+      width="0"
+      height="0"
+      src="https://www.youtube.com/embed/sx2aDv_hAUA?controls=0&autoplay=1"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+
+    <script>
+      function openModal() {
+        document.getElementById("puzzlePopup").style.display = "block";
+      }
+      var slideIndex = 1;
+        showSlides(slideIndex);
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("each-puzzle");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slides[slideIndex - 1].style.display = "block";
+      }
+    </script>
+    <script src="js/index.js"></script>
+  </body>
+</html>

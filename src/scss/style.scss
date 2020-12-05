@@ -1,0 +1,221 @@
+html,
+body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    color: white;
+    background-color: rgb(126, 59, 59);
+}
+
+h1{
+    margin: 0;
+    padding: 2rem;
+}
+iframe{
+    background-color: rgb(154, 198, 240);
+}
+.screen{
+    padding-top: 2rem;
+    background-color: rgb(154, 198, 240);
+    text-align: center;  
+    justify-content: center;
+    display: flex;  
+    align-self: end;
+}
+.start-screen{
+    z-index: 2;
+}
+
+.end-screen{
+    z-index: 3;
+}
+.flex-end{
+    align-self: flex-end;
+}
+.flex-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+//main game positioning
+.relative{
+    position: relative;
+    top: 0.25rem;
+}
+.books{
+    top: 1.5rem;
+    left: 9rem;
+}
+.avengers{
+    top: -7rem;
+    left: 7rem;
+}
+.laptop{
+    top: -5rem;
+    left: 1rem;
+}
+.globe {
+    top: -4rem;
+    left : 13.5rem;
+}
+.stool{
+    position: absolute;
+    z-index: 1;
+    top: 3rem;
+    left: 2.5rem;
+}
+.poster{
+    top : -10rem;
+    left : 8rem;
+}
+.calculator{
+    top : -2.75rem;
+    left : 9rem;
+}
+.padlock{
+    top: 7.75rem;
+    left: 2rem;
+}
+.schedule{
+    top: 2rem;
+    left: 7rem;
+}
+
+//main game position ending 
+.header{
+    background-color: rgb(154, 198, 240);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.sound-icon{
+    align-self: center;
+}
+
+.header h1{
+    align-self: center;
+    font-size: 30px;
+}
+
+.header h4{
+    align-self: center;
+}
+
+.text-center{
+    text-align: center;
+}
+img{
+    margin: 0.5rem 0.5rem 0 0.5rem;
+}
+.object{
+    transition: transform 0.3s;
+    z-index: 1;
+    position: absolute;
+    cursor: pointer;
+}
+
+.object:hover {
+    -ms-transform: scale(1.25); /* IE 9 */
+    -webkit-transform: scale(1.25); /* Safari 3-8 */
+    transform: scale(1.25);
+}
+
+//start and end screen styling
+.start-screen {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background-color: rgba(104, 127, 255, 1);
+}
+
+.start-screen-content {
+  position : relative;
+  top: 25%;
+  width: 70%;
+  margin: auto;
+  text-align: center;
+//   margin: 2rem;
+}
+
+.start-screen button {
+  padding: 8px;
+  font-size: 25px;
+  background-color: white;
+  color : rgba(104, 127, 255, 1);
+  transition: 0.3s;
+  cursor: pointer;
+  border-color: white;
+}
+
+.start-screen button:hover, .start-screen button:focus {
+  background-color: rgba(104, 127, 255, 1);
+  color: white;
+  border-color: white;
+}
+.start-screen p{
+    font-size: 30px;
+}
+
+#restart-btn{
+    background-color: rgb(111, 121, 255);
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    align-self: center;
+    height: 60%;
+    padding: 0.75rem;
+    border: none;
+}
+
+#restart-btn:hover{
+    background-color: white;
+    color:  rgb(111, 121, 255);
+}
+
+.end-screen{
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  background-color: rgb(114, 199, 171);
+}
+
+.end-screen-content {
+  position: relative;
+  top: 10%;
+  width: 70%;
+  margin: auto;
+  text-align: center;
+}
+
+.end-screen button {
+  padding: 8px;
+  font-size: 25px;
+  background-color: white;
+  color : rgb(114, 199, 171);
+  transition: 0.3s;
+  cursor: pointer;
+  border-color: white;
+}
+
+.end-screen button:hover, .end-screen button:focus {
+    background-color: rgb(114, 199, 171);
+    color: white;
+}
+
+.end-screen p{
+    font-size: 30px;
+}
+
+.end-screen a{
+    color: white;
+    padding-top: 0.5rem;
+}
