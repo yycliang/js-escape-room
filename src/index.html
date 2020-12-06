@@ -20,7 +20,6 @@
         <button id="start-button">Ugh...Sure</button>
       </div>
     </div>
-
     <!-- End Screen -->
     <section id="end-screen" class="end-screen">
       <div class="end-screen-content">
@@ -79,7 +78,6 @@
       <!-- BED AREA -->
       <div class="bed-grid flex-end relative">
         <img
-          onclick="openModal();currentSlide(1)"
           class="object avengers"
           width="125px"
           height="auto"
@@ -87,7 +85,6 @@
           alt=""
         />
         <img
-          onclick="openModal();currentSlide(4)"
           class="object books"
           width="75px"
           height="auto"
@@ -105,7 +102,6 @@
       <!-- DESK AREA -->
       <div class="desk-grid flex-end relative">
         <img
-          onclick="openModal();currentSlide(5)"
           class="object laptop"
           width="100px"
           height="auto"
@@ -113,7 +109,6 @@
           alt=""
         />
         <img
-          onclick="openModal();currentSlide(6)"
           class="object poster"
           width="75px"
           height="auto"
@@ -128,7 +123,6 @@
           alt=""
         />
         <img
-          onclick="openModal();currentSlide(7)"
           class="object calculator"
           width="50px"
           height="auto"
@@ -137,7 +131,6 @@
         />
         <div>
           <img
-            onclick="openModal();currentSlide(8)"
             class="object globe"
             width="75px"
             height="auto"
@@ -156,7 +149,6 @@
       <!-- DOOR AREA -->
       <div class="door-grid flex-end relative">
         <img
-          onclick="openModal();currentSlide(2)"
           class="object schedule"
           width="75px"
           height="auto"
@@ -164,7 +156,6 @@
           alt=""
         />
         <img
-          onclick="openModal();currentSlide(3)"
           class="object padlock"
           width="50px"
           height="auto"
@@ -200,22 +191,7 @@
           </div>
         </div>
         <!-- The other popups should show here via JS "beforeend"-->
-        <!-- <div class="each-puzzle">
-          <p>That is the lock on your door. Make sure you've finished all your homework to escape! </p>
-          <div class="puzzle-content">
-            <img src="img/padlockpuzzle.jpg" width="350px" height="auto" />
-            <div class="flex-column">
-              <p id="lockCheck"></p>
-              <img src="img/schoolanswer.PNG" width="300px" height="auto" alt="">
-              <input type="text" id="SCHOOL" placeholder="Your Answer" />
-              <input type="submit" id="lockSubmit" value="Submit" />
-            </div>
-          </div>
-        </div> -->
-        
-
     </div>
-
     <iframe
       width="0"
       height="0"
@@ -224,34 +200,8 @@
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen
     ></iframe>
-
-    <script>
-      function openModal() {
-        document.getElementById("puzzlePopup").style.display = "block";
-      }
-      var slideIndex = 1;
-        showSlides(slideIndex);
-      function plusSlides(n) {
-        showSlides((slideIndex += n));
-      }
-      function currentSlide(n) {
-        showSlides((slideIndex = n));
-      }
-      function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("each-puzzle");
-        if (n > slides.length) {
-          slideIndex = 1;
-        }
-        if (n < 1) {
-          slideIndex = slides.length;
-        }
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-        }
-        slides[slideIndex - 1].style.display = "block";
-      }
-    </script>
     <script src="js/index.js"></script>
+    <script src="js/DOM.js"></script>
+    <script src="js/puzzles.js"></script>
   </body>
 </html>
