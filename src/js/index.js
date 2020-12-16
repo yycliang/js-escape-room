@@ -25,7 +25,7 @@ const init = function () {
             <div class="flex-column">
               <p id="${puzzle.answer}Check"></p>
               <img src="${puzzle.answerImg}" width="300px" height="auto" alt="">
-              <input type="text" id="${puzzle.answer}" placeholder="Your Answer" />
+              <input type="password" id="${puzzle.answer}" placeholder="Your Answer" />
               <input type="submit" id="${puzzle.answer}Submit" value="Submit" />
             </div>
           </div>
