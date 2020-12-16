@@ -54,7 +54,7 @@ const init = function () {
             "color-red";
           document
             .querySelector(`#${puzzle.answer}Check`)
-            .insertAdjacentHTML("beforeend", "Incorrect, try again :(");
+            .insertAdjacentHTML("beforeend", `${x} is incorrect, try again :(`);
         }
       })
   );
