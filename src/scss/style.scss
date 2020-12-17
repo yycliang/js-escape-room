@@ -220,8 +220,16 @@ img{
     padding-top: 0.5rem;
 }
 
-.responsive {
+.img-responsive {
     width: 100%;
     max-width: 400px;
     height: auto;
+}
+
+@media only screen and (max-width: 1025px) {
+    .img-responsive {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
 }

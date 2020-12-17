@@ -21,7 +21,7 @@ const init = function () {
         <div class="each-puzzle">
           <p>${puzzle.message}</p>
           <div class="puzzle-content">
-            <img src="${puzzle.puzzleImg}" width="425px" height="auto" />
+            <img src="${puzzle.puzzleImg}" class="img-responsive" />
             <div class="flex-column">
               <p id="${puzzle.answer}Check"></p>
               <img src="${puzzle.answerImg}" width="300px" height="auto" alt="">
